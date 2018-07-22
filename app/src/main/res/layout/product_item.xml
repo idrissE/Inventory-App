@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItemContainerStyle">
+
+    <ImageView
+        android:id="@+id/product_thumbnail"
+        style="@style/ListItemImgStyle"
+        tools:src="@drawable/ic_camera_alt" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        style="@style/ProductItemContainer">
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/ProductNameStyle"
+            tools:text="Product Name" />
+
+        <TextView
+            android:id="@+id/product_quantity"
+            style="@style/ProductQuantityStyle"
+            tools:text="Quantity: 919" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_price"
+        style="@style/ProductPriceStyle"
+        tools:text="$99.99" />
+
+    <Button
+        android:id="@+id/sale_btn"
+        style="@style/SaleBtnStyle" />
+</RelativeLayout>

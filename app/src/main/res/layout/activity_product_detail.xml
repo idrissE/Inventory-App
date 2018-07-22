@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FullContainer"
+    tools:context=".ProductDetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ProductDetailActivity">
+
+        <ImageView
+            android:id="@+id/product_image"
+            style="@style/ImageDetailStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_camera_alt" />
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/ProductNameDetailStyle"
+            app:layout_constraintEnd_toStartOf="@+id/call_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_image"
+            tools:text="Product Name" />
+
+        <Button
+            android:id="@+id/call_btn"
+            style="@style/CallBtnStyle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/product_name"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/quantity_label"
+            style="@style/LabelStyle"
+            android:text="@string/product_quantity_hint"
+            app:layout_constraintBaseline_toBaselineOf="@+id/decrease_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/decrease_btn"
+            style="@style/QuantityCtrlBtn"
+            android:text="@string/minus_sign"
+            app:layout_constraintStart_toEndOf="@+id/quantity_label"
+            app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+        <TextView
+            android:id="@+id/product_quantity"
+            style="@style/QuantityDetailStyle"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/decrease_btn"
+            app:layout_constraintEnd_toStartOf="@+id/increase_btn"
+            app:layout_constraintStart_toEndOf="@+id/decrease_btn"
+            tools:text="100" />
+
+        <Button
+            android:id="@+id/increase_btn"
+            style="@style/QuantityCtrlBtn"
+            android:text="@string/plus_sign"
+            app:layout_constraintBaseline_toBaselineOf="@+id/product_quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/product_quantity" />
+
+        <TextView
+            android:id="@+id/product_label"
+            style="@style/LabelStyle"
+            android:text="@string/product_price_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decrease_btn" />
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/InputDataStyle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/product_label"
+            app:layout_constraintStart_toEndOf="@+id/product_label"
+            tools:text="$9.99" />
+
+        <TextView
+            android:id="@+id/supplier_label"
+            style="@style/LabelStyle"
+            android:text="@string/supplier_name_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_label" />
+
+        <TextView
+            android:id="@+id/supplier_name"
+            style="@style/InputDataStyle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/supplier_label"
+            app:layout_constraintStart_toEndOf="@+id/supplier_label"
+            tools:text="Amazon" />
+
+        <TextView
+            android:id="@+id/supplier_phone_label"
+            style="@style/LabelStyle"
+            android:text="@string/supplier_phone_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supplier_label" />
+
+        <TextView
+            android:id="@+id/supplier_phone"
+            style="@style/InputDataStyle"
+            app:layout_constraintBaseline_toBaselineOf="@+id/supplier_phone_label"
+            app:layout_constraintStart_toEndOf="@+id/supplier_phone_label"
+            tools:text="199999" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

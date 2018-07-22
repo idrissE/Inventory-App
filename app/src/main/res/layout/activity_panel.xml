@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EditorContainerStyle"
+    tools:context=".PanelActivity">
+
+    <LinearLayout
+        style="@style/ProductInfoContainerStyle"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            style="@style/SectionTitleStyle"
+            android:text="@string/product_info" />
+
+        <LinearLayout style="@style/FormContainer">
+
+            <ImageButton
+                android:id="@+id/product_image"
+                style="@style/ProductImgStyle"
+                android:backgroundTint="@android:color/transparent" />
+
+            <EditText
+                android:id="@+id/product_name"
+                style="@style/NameInputStyle"
+                android:hint="@string/product_name_hint" />
+
+            <EditText
+                android:id="@+id/price_label"
+                style="@style/PriceInputStyle"
+                android:hint="@string/product_price_hint" />
+
+            <EditText
+                android:id="@+id/product_quantity"
+                style="@style/QuantityInputStyle"
+                android:hint="@string/product_quantity_hint" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/ProductInfoContainerStyle">
+
+        <TextView
+            style="@style/SectionTitleStyle"
+            android:text="@string/supplier_info" />
+
+        <LinearLayout style="@style/FormContainer">
+
+            <EditText
+                android:id="@+id/supplier_name"
+                style="@style/SupplierNameInputStyle"
+                android:hint="@string/supplier_name_hint" />
+
+            <EditText
+                android:id="@+id/supplier_phone"
+                style="@style/SupplierPhoneInputStyle"
+                android:hint="@string/supplier_phone_hint" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/call_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/call_supplier"
+        android:visibility="gone" />
+</LinearLayout>

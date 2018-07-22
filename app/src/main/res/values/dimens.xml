@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base_dim">16dp</dimen>
+    <dimen name="half_dim">8dp</dimen>
+    <dimen name="double_dim">32dp</dimen>
+    <dimen name="text_top_padding">12dp</dimen>
+    <dimen name="item_height">88dp</dimen>
+    <dimen name="sale_btn_size">60dp</dimen>
+</resources>
